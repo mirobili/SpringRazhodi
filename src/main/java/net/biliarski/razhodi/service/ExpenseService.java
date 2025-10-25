@@ -17,7 +17,7 @@ import java.util.UUID;
 public class ExpenseService {
 
 
-    private ExpenseRepository expenseRepository;
+    private final ExpenseRepository expenseRepository;
 
 
     @Autowired
@@ -39,8 +39,7 @@ public class ExpenseService {
         if(expense.getId()==null){
             expense.setId(UUID.randomUUID().toString());
         }
-        ExpenseDto saved = expenseRepository.save(expense);
-        return saved;
+        return expenseRepository.save(expense);
     }
 
 

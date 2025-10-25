@@ -9,13 +9,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Optional;
 
 @Repository
 public class ExpenseRepository {
 
 
-    private FileReadWriter fileReadWriter;
+    private final FileReadWriter fileReadWriter;
 
     @Autowired
     public ExpenseRepository(FileReadWriter fileReadWriter) {

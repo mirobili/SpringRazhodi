@@ -1,21 +1,20 @@
 package net.biliarski.razhodi.controller;
 
 import net.biliarski.razhodi.dto.ExpenseDto;
-
 import net.biliarski.razhodi.dto.PersonDto;
 import net.biliarski.razhodi.dto.UserDto;
 import net.biliarski.razhodi.dto.response.UserResponse;
 import net.biliarski.razhodi.service.ExpenseService;
-
 import net.biliarski.razhodi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
-
-import net.biliarski.razhodi.service.TestService;
 
 @RestController
 @RequestMapping("/api/expenses")
@@ -23,7 +22,7 @@ public class ExpenseController {
 
     private final ExpenseService expenseService;
 
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
     public ExpenseController(UserService userService, ExpenseService expenseService) {
@@ -87,16 +86,16 @@ public class ExpenseController {
         return expenseService.getAll();
     }
 
-    private static ExpenseDto dummyExpense() {
-        ExpenseDto expense = new ExpenseDto();
-        expense.setName("Expense 1");
-        expense.setAmount(100);
-        expense.setCategory("Category 1");
-        expense.setDate("2022-01-01");
-        expense.setDescription("Description 1");
-        expense.setUserId(UUID.randomUUID().toString());
-        return expense;
-    }
+//    private static ExpenseDto dummyExpense() {
+//        ExpenseDto expense = new ExpenseDto();
+//        expense.setName("Expense 1");
+//        expense.setAmount(100);
+//        expense.setCategory("Category 1");
+//        expense.setDate("2022-01-01");
+//        expense.setDescription("Description 1");
+//        expense.setUserId(UUID.randomUUID().toString());
+//        return expense;
+//    }
 
     /******************** POST ****************************/
 
