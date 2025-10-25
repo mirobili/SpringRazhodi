@@ -37,8 +37,8 @@ This project is a Spring Boot-based REST API for [your domain]. It features secu
 
 Clone the repository
 
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/mirobili/SpringRazhodi.git
+cd SpringRazhodi
 Build the project
 
 ./mvnw clean install # or ./gradlew build
