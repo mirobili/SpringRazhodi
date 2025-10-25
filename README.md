@@ -88,5 +88,5 @@ MIT / Apache 2.0 / Your License
 
 Your Name  
 your.email@example.com
-
----
+ 
+---   
